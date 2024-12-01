@@ -17,4 +17,20 @@ const config: Config = {
   },
   plugins: [],
 }
+
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+  ],
+  darkMode: 'class', // Enable dark mode
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+  corePlugins: {
+    preflight: false, // Disable Tailwind's preflight to avoid conflicts with Ant Design
+  },
+}
+
 export default config

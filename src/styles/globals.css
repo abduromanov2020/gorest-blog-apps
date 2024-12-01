@@ -3,25 +3,62 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-modal: #ffffff;
+  --bg-input: #ffffff;
+  --text-primary: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+[data-theme='dark'] {
+  --bg-modal: #1f2937;
+  --bg-input: #374151;
+  --text-primary: #ffffff;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+}
+
+.ant-modal-content {
+  background-color: var(--bg-modal) !important;
+}
+
+.ant-input {
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+}
+
+.ant-input-search-button {
+  background-color: var(--bg-input) !important;
+}
+
+/* Dark mode overrides for Ant Design components */
+.dark .ant-modal-close {
+  color: #9ca3af !important;
+}
+
+.dark .ant-modal-close:hover {
+  color: #f3f4f6 !important;
+}
+
+.dark .ant-modal-header {
+  background-color: var(--bg-modal) !important;
+}
+
+.dark .ant-pagination-item {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.dark .ant-pagination-item-active {
+  background-color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.dark .ant-pagination-item a {
+  color: #e5e7eb !important;
+}
+
+.dark .ant-pagination-prev button,
+.dark .ant-pagination-next button {
+  color: #e5e7eb !important;
 }
