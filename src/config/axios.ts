@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import Router from 'next/router'
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
 })
 
 axiosInstance.interceptors.request.use((config) => {

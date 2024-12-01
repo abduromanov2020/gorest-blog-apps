@@ -1,10 +1,10 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
   testDir: './tests',
   timeout: 45000,
   expect: {
-    timeout: 15000
+    timeout: 15000,
   },
   workers: 1,
   use: {
@@ -28,8 +28,5 @@ export default defineConfig({
     reuseExistingServer: true,
     timeout: 120000,
   },
-  reporter: [
-    ['list'],
-    ['html', { open: 'never' }]
-  ],
-});
+  reporter: [['list'], ['html', { open: 'never' }]],
+})

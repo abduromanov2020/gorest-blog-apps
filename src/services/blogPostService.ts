@@ -54,7 +54,10 @@ export class BlogPostService {
     return data
   }
 
-  static async updateExistingPost(postId: number, postData: Partial<BlogPostForm>): Promise<BlogPost> {
+  static async updateExistingPost(
+    postId: number,
+    postData: Partial<BlogPostForm>
+  ): Promise<BlogPost> {
     const userId = this.getUserId()
 
     const { data } = await axiosInstance.put<BlogPost>(`/posts/${postId}`, {
