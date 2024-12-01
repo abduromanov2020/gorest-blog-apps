@@ -122,6 +122,61 @@ A modern blog platform built with Next.js, TypeScript, and Ant Design, utilizing
 - Post deletion
 - Post listing
 
+## 🔄 CI/CD Pipeline
+
+### Overview
+
+The project implements a CI/CD pipeline using GitHub Actions, automatically handling testing, building, and deployment to Vercel.
+
+### Pipeline Jobs
+
+#### 1. Lint and Test
+
+This job runs on every push and pull request:
+
+- Node.js setup (v22.11.0)
+- Dependencies installation
+- Playwright browser setup
+- ESLint checks
+- Prettier formatting checks
+- Playwright tests
+- Build verification
+- Test report artifacts storage
+
+#### 2. Deploy
+
+Runs only on main branch after successful testing:
+
+- Automated deployment to Vercel
+- Production environment updates
+
+### Required Secrets
+
+To enable deployment, the following secrets must be configured in GitHub:
+
+- `VERCEL_TOKEN`: Your Vercel authentication token
+- `VERCEL_ORG_ID`: Your Vercel organization ID
+- `VERCEL_PROJECT_ID`: Your Vercel project ID
+
+### Automated Checks
+
+1. **Code Quality**
+
+   - ESLint for code linting
+   - Prettier for code formatting
+   - Type checking with TypeScript
+
+2. **Testing**
+
+   - Full Playwright test suite execution
+   - Test reports generation and storage
+   - Artifact retention for 30 days
+
+3. **Build Verification**
+   - Production build testing
+   - Bundle size optimization checks
+   - Build artifact verification
+
 ## 🌐 API Integration
 
 The application uses the GoRest public API v2:
