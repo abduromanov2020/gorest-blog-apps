@@ -2,6 +2,16 @@
 
 A modern blog platform built with Next.js, TypeScript, and Ant Design, utilizing the GoRest public API for data management.
 
+## 🌐 Live Demo
+
+**Production URL**: [https://gorest-blog-apps.vercel.app/](https://gorest-blog-apps.vercel.app/)
+
+To test the application:
+
+1. Get your API token from [GoRest](https://gorest.co.in/)
+2. Use the token when registering in the welcome dialog
+3. Start creating and managing blog posts
+
 ## 🚀 Features
 
 - **User Authentication**: Welcome dialog for user registration with GoRest API token
